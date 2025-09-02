@@ -21,7 +21,28 @@ class Operaciones:
                 continue    
     
     def sumar(self):
-        self.resultado = "La suma de " + str(self.num1) + " + " + str(self.num2) + " es igula a " + str(self.num1 + self.num2)
+        self.resultado = f"La suma de {self.num1} + {self.num2} es igual a {self.num1 + self.num2}"
+
+    def restar(self):
+        self.resultado = f"La resta de {self.num1} - {self.num2} es igual a {self.num1 - self.num2}"
+
+    def multiplicar(self):
+        self.resultado = f"La multiplicación de {self.num1} * {self.num2} es igual a {self.num1 * self.num2}"
+
+    def dividir(self):
+        if self.num2 == 0:
+            self.resultado = "Error: No se puede dividir entre cero"
+        else:
+            self.resultado = f"La división de {self.num1} / {self.num2} es igual a {self.num1 / self.num2}"
+
+    def modulo(self):
+        if self.num2 == 0:
+            self.resultado = "Error: No se puede calcular módulo con divisor cero"
+        else:
+            self.resultado = f"El módulo de {self.num1} % {self.num2} es igual a {self.num1 % self.num2}"
+    
+
+    
     
     def mostrarResultado(self):
         print(self.resultado)
